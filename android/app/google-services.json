@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "904432853632",
+    "project_id": "medicodocs-888e8",
+    "storage_bucket": "medicodocs-888e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904432853632:android:1d213e9e8091318aea7c65",
+        "android_client_info": {
+          "package_name": "com.medicodocs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904432853632-p25aiop4qqsvvvmb3oma64ir86tsa7dr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7u63oZSoaAJxV5S9EvMxCfK9IE8fm7ss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904432853632-p25aiop4qqsvvvmb3oma64ir86tsa7dr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
