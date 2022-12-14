@@ -82,6 +82,28 @@ export default global = {
     return VALID_PHONE_NUMBER_REGEX;
   },
 
+  getDate(date) {
+    var d = new Date(date);
+    var month = '' + (d.getMonth() + 1);
+    var day = '' + d.getDate();
+    var year = d.getFullYear();
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [year, month, day].join('-');
+  },
+
+  getReadableDate(date) {
+    var d = new Date(date);
+    var month = '' + (d.getMonth() + 1);
+    var day = '' + d.getDate();
+    var year = d.getFullYear();
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+    
+    return [day, month, year].join('-');
+  },
+
   async storeItem(key, item) {
     try {
       var jsonOfItem = await AsyncStorage.setItem(key, JSON.stringify(item));

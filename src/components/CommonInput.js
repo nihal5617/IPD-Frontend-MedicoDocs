@@ -6,12 +6,16 @@ import fonts from '../utility/fonts';
 import colors from '../styles/colors';
 import Ripple from 'react-native-material-ripple';
 import IONI from 'react-native-vector-icons/Ionicons';
+import global from '../utility/global';
 
 export default function CommonInput({
   title,
   control,
   name,
+  errors,
   rules = {},
+  requiredError = `Please enter ${title.toLowerCase()}`,
+  validationError = `Please enter valid ${title.toLowerCase()}`,
   otherTextInputProps = {},
   style = {},
   textBoxStyle = {},
@@ -56,14 +60,17 @@ export default function CommonInput({
           {...otherTextInputProps}
         />
       </View>
+      {errors[name]?.type === 'required' &&
+        global.getValidateText(requiredError)}
+      {errors[name]?.type === 'pattern' &&
+        global.getValidateText(validationError)}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   text: {
-    fontFamily: fonts.FONT_FAMILY.Regular,
-    fontWeight: 'bold',
+    fontFamily: fonts.FONT_FAMILY.Bold,
     fontSize: fonts._13,
     color: colors.BLACK,
   },

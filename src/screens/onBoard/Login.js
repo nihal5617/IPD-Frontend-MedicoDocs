@@ -19,19 +19,19 @@ const apiKey = {
 };
 
 export default function Login(props) {
-  const {
-    control,
-    handleSubmit,
-    setValue,
-    formState: {errors},
-  } = useForm();
+  const renderPage = (props, isDoctor) => {
+    const [isLoading, setLoading] = useState(false);
+    const {
+      control,
+      handleSubmit,
+      setValue,
+      formState: {errors},
+    } = useForm();
 
-  const onSubmit = data => {
-    console.log(data);
-  };
-  const [isLoading, setLoading] = useState(false);
-
-  const renderPage = isDoctor => {
+    const onSubmit = data => {
+      console.log(props);
+      props.navigation.navigate('EnterOtp');
+    };
     return (
       <View style={internalstyles.container}>
         <View style={internalstyles.input_container}>
@@ -85,7 +85,9 @@ export default function Login(props) {
           <Text>Dont have an Account ?{'  '}</Text>
           <Ripple
             onPress={() => {
-              // props.navigation.navigate('Register');
+              isDoctor
+                ? props.navigation.navigate('SignupDoctor1')
+                : props.navigation.navigate('SignupPatient');
             }}>
             <Text
               style={{
@@ -96,7 +98,7 @@ export default function Login(props) {
             </Text>
           </Ripple>
         </View>
-        <PrimaryButton title="Login" onPress={handleSubmit(onSubmit)} />
+        <PrimaryButton title="Generate OTP" onPress={handleSubmit(onSubmit)} />
         <Ripple
           style={internalstyles.need_help}
           onPress={() => {
@@ -117,11 +119,6 @@ export default function Login(props) {
         />
       </View>
       <Tab.Navigator
-        // it should be a tab navigator with two tabs in center with width of 25% each
-        // and the active tab should be highlighted with white color
-        // and the inactive tab should be highlighted with grey color
-        // and the tab should be in center
-
         tabBarOptions={{
           activeTintColor: colors.WHITE,
           inactiveTintColor: colors.BLACK,
@@ -141,8 +138,8 @@ export default function Login(props) {
             backgroundColor: colors.WHITE,
           },
         }}>
-        <Tab.Screen name="Patient" component={() => renderPage()} />
-        <Tab.Screen name="Doctor" component={() => renderPage(true)} />
+        <Tab.Screen name="Patient" component={() => renderPage(props)} />
+        <Tab.Screen name="Doctor" component={() => renderPage(props, true)} />
       </Tab.Navigator>
     </View>
   );

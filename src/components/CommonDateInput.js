@@ -41,7 +41,6 @@ export default function CommonDateInput(props) {
               *
             </Text>
           )}
-          <Text style={styles.text}>:</Text>
         </View>
       )}
       <Ripple
@@ -59,7 +58,7 @@ export default function CommonDateInput(props) {
         date={date}
         onConfirm={date => {
           setDate(date);
-          props.onSelectChange(date);
+          // props.onSelectChange(date);
           setOpen(false);
           setFlag(true);
         }}
@@ -106,13 +105,11 @@ const styles = StyleSheet.create({
   boxView: {
     flexDirection: 'row',
     alignItems: 'center',
-    // flex: 1,
-    height: 40,
+    height: 45,
     backgroundColor: colors.BOX_COLOR,
-    borderWidth: 0.2,
-    borderRadius: 3,
+    borderWidth: 1,
+    borderRadius: 10,
     borderColor: '#B0B0B0',
-    // borderColor: '#F9F9F9',
     borderStyle: 'solid',
     marginTop: 7,
     paddingStart: 10,
