@@ -3,6 +3,8 @@ import React from 'react';
 import GetOtp from './onBoard/GetOtp';
 import Login from './onBoard/Login';
 import onBoard from './onBoard/onBoard';
+import SignupDoctor1 from './onBoard/SignupDoctor1';
+import SignupDoctor2 from './onBoard/SignupDoctor2';
 import SignupPatient from './onBoard/SignupPatient';
 
 const Stack = createNativeStackNavigator();
@@ -61,6 +63,12 @@ export default function OnBoardStack() {
         component={SignupPatient}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        name="SignupDoctor1"
+        component={SignupDoctor1}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen name="SignupDoctor2" component={SignupDoctor2} />
     </Stack.Navigator>
   );
 }

@@ -23,6 +23,8 @@ export default constants = {
   TXT_EMAIL_ADDRESS: 'Enter Email',
   TXT_FULL_NAME: 'First Name',
   TXT_DATE_OF_BIRTH: 'Enter Date of Birth',
+  TXT_YEAR_OF_GRADUATION: 'Enter Year of Graduation',
+  TXT_STATE_MEDICAL_COUNCIL: 'Enter State Medical Council',
 
 
 

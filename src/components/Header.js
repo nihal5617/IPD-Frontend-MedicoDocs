@@ -77,15 +77,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.WHITE,
     paddingHorizontal: 15,
-    width:'100%',
-    borderBottomColor:colors.BACKGROUND_COLOR,
-    borderBottomWidth:2
+    elevation: 5,
   },
   btnBack: {
     alignSelf: 'center',
     height: 40,
     width: 40,
-    padding: 8,
     marginRight: 10,
     alignItems: 'center',
     justifyContent: 'center',

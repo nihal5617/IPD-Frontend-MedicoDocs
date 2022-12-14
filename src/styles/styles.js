@@ -92,7 +92,11 @@ export default styles = StyleSheet.create({
     },
     taskFooter:{
         height:70
-    }
+    },
+    dropdownItemseparator: {
+        height: StyleSheet.hairlineWidth,
+        backgroundColor: '#999',
+    },
 });
 
 

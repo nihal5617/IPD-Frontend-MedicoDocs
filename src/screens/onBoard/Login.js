@@ -110,7 +110,7 @@ export default function Login(props) {
     );
   };
   return (
-    <View style={[styles.styleFull, {paddingHorizontal: 22}]}>
+    <View style={[styles.styleFull]}>
       <View style={internalstyles.image_container}>
         <Image
           source={require('../../assets/images/logo_with_text.png')}
@@ -149,7 +149,7 @@ const internalstyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.WHITE,
-    padding: 22,
+    paddingHorizontal: 22,
     paddingTop: 0,
   },
   image_container: {
@@ -160,11 +160,6 @@ const internalstyles = StyleSheet.create({
   image: {
     width: 250,
     height: 100,
-  },
-  switch_container: {
-    marginTop: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   input_container: {
     marginTop: 10,
