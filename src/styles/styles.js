@@ -6,7 +6,7 @@ export default styles = StyleSheet.create({
 
     styleFull: {
         flex: 1,
-        backgroundColor: colors.WHITE
+        backgroundColor: colors.BACKGROUND
     },
 
     defaultText: {
