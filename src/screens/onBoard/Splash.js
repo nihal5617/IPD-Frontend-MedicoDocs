@@ -11,7 +11,8 @@ export default function Splash({navigation}) {
         route = "MainStack";
       }
       else {
-        route = "OnBoard";
+        // route = "OnBoard";
+        route = "DotorStack";
       }
      
       setTimeout(() => {

@@ -1,11 +1,8 @@
 import React, {useState} from 'react';
 import {TextInput, View, Text, StyleSheet} from 'react-native';
-import PropTypes from 'prop-types';
 import {useController} from 'react-hook-form';
 import fonts from '../utility/fonts';
 import colors from '../styles/colors';
-import Ripple from 'react-native-material-ripple';
-import IONI from 'react-native-vector-icons/Ionicons';
 import global from '../utility/global';
 
 export default function CommonInput({
@@ -70,9 +67,9 @@ export default function CommonInput({
 
 const styles = StyleSheet.create({
   text: {
-    fontFamily: fonts.FONT_FAMILY.Bold,
-    fontWeight: 'bold',
-    fontSize: fonts._13,
+    fontFamily: fonts.FONT_FAMILY.Regular,
+    fontWeight: '400',
+    fontSize: fonts._12,
     color: colors.BLACK,
   },
   boxView: {

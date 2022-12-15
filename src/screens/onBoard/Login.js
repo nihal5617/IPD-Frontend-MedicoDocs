@@ -30,7 +30,8 @@ export default function Login(props) {
 
     const onSubmit = data => {
       console.log(props);
-      props.navigation.navigate('EnterOtp');
+      // naivgate to EnterOtp and pass isDoctor
+      props.navigation.navigate('EnterOtp', {isDoctor: isDoctor});
     };
     return (
       <View style={internalstyles.container}>

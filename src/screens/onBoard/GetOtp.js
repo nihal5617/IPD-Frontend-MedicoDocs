@@ -14,7 +14,8 @@ const apiKey = {
   OTP: 'otp',
 };
 
-export default function GetOtp({isDoctor,navigation}) {
+export default function GetOtp(props) {
+  console.log(props);
   const {
     control,
     handleSubmit,
@@ -24,18 +25,18 @@ export default function GetOtp({isDoctor,navigation}) {
 
   const onSubmit = data => {
     console.log(data);
-    if(isDoctor){
+    if (props.route.params.isDoctor) {
       setTimeout(() => {
-        navigation.reset({
+        props.navigation.reset({
           index: 0,
-          routes: [{ name: 'DoctorStack' }],
+          routes: [{name: 'DotorStack'}],
         });
       }, 1000);
-    }else{
+    } else {
       setTimeout(() => {
-        navigation.reset({
+        props.navigation.reset({
           index: 0,
-          routes: [{ name: 'PatientStack' }],
+          routes: [{name: 'PatientStack'}],
         });
       }, 1000);
     }
@@ -93,13 +94,13 @@ export default function GetOtp({isDoctor,navigation}) {
         </Ripple>
       </View>
       <PrimaryButton title="Confirm" onPress={handleSubmit(onSubmit)} />
-        <Ripple
-          style={internalstyles.need_help}
-          onPress={() => {
-            props.navigation.navigate('NeedHelp');
-          }}>
-          <Text style={internalstyles.needHelpText}>Need Help?</Text>
-        </Ripple>
+      <Ripple
+        style={internalstyles.need_help}
+        onPress={() => {
+          props.navigation.navigate('NeedHelp');
+        }}>
+        <Text style={internalstyles.needHelpText}>Need Help?</Text>
+      </Ripple>
     </View>
   );
 }

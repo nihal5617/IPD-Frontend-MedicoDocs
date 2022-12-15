@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     color: colors.BLACK,
     fontSize: fonts._18,
     fontFamily: fonts.FONT_FAMILY.Bold,
+    fontWeight: 'bold',
   },
 
   logo: {

@@ -33,7 +33,7 @@ export default function SignupDoctor2(props) {
   };
 
   const handleSubmit = () => {
-    props.navigation.navigate('EnterOtp');
+    props.navigation.navigate('EnterOtp', {isDoctor: true});
   };
 
   return (

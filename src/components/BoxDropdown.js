@@ -78,9 +78,9 @@ const internalStyles = StyleSheet.create({
     paddingHorizontal: 5,
   },
   text: {
-    fontFamily: fonts.FONT_FAMILY.Bold,
-    fontWeight: 'bold',
-    fontSize: fonts._13,
+    fontFamily: fonts.FONT_FAMILY.Regular,
+    fontWeight: '400',
+    fontSize: fonts._12,
     color: colors.BLACK,
   },
   boxView: {
