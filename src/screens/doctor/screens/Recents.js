@@ -233,7 +233,7 @@ const internalstyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.BACKGROUND,
-    paddingTop: 22,
+    paddingTop: 15,
     paddingBottom: 0,
     paddingHorizontal: 10,
   },

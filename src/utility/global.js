@@ -1,7 +1,7 @@
 import React from 'react';
 import {showSnackBar} from '@prince8verma/react-native-snackbar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Alert, View, Text, Image, StyleSheet} from 'react-native';
+import {Alert, View, Text, Image, StyleSheet, Linking} from 'react-native';
 
 import IconM from 'react-native-vector-icons/MaterialIcons';
 import IconF from 'react-native-vector-icons/FontAwesome';
@@ -102,6 +102,39 @@ export default global = {
     if (day.length < 2) day = '0' + day;
     
     return [day, month, year].join('-');
+  },
+
+  getTimeDifference(date) {
+    var diff = Math.floor((new Date() - new Date(date)) / 1000 / 60);
+    if (diff < 1) {
+      return 'Just now';
+    }
+    if (diff < 60) {
+      return diff + ' minutes ago';
+    }
+    diff = Math.floor(diff / 60);
+    if (diff < 24) {
+      return diff + ' hours ago';
+    }
+    diff = Math.floor(diff / 24);
+    if (diff < 7) {
+      return diff + ' days ago';
+    }
+    diff = Math.floor(diff / 7);
+    if (diff < 4) {
+      return diff + ' weeks ago';
+    }
+    return 'on ' + this.getDate(date);
+  },
+
+  openUrl(url) {
+    Linking.canOpenURL(url).then(supported => {
+      if (supported) {
+        Linking.openURL(url);
+      } else {
+        console.log("Don't know how to open URI: " + url);
+      }
+    });
   },
 
   async storeItem(key, item) {
