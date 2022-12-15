@@ -102,7 +102,7 @@ export default function Login(props) {
         <Ripple
           style={internalstyles.need_help}
           onPress={() => {
-            // props.navigation.navigate('NeedHelp');
+            props.navigation.navigate('NeedHelp');
           }}>
           <Text style={internalstyles.needHelpText}>Need Help?</Text>
         </Ripple>

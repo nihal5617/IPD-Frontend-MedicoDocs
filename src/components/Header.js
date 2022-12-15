@@ -29,6 +29,7 @@ export default function Header(props) {
             constants.IC_IONiCONS,
             'ios-chevron-back-outline',
             25,
+            colors.BLACK,
           )}
         </TouchableHighlight>
       )}

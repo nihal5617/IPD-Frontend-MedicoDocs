@@ -68,7 +68,7 @@ const internalStyles = StyleSheet.create({
   conatiner: {
     backgroundColor: colors.WHITE,
     borderRadius: 8,
-    paddingBottom: 21,
+    // paddingBottom: 21,
   },
   picker: {
     maxHeight: 160,
@@ -78,8 +78,8 @@ const internalStyles = StyleSheet.create({
     paddingHorizontal: 5,
   },
   text: {
-    fontFamily: fonts.FONT_FAMILY.Regular,
-    fontWeight: '400',
+    fontFamily: fonts.FONT_FAMILY.Bold,
+    fontWeight: 'bold',
     fontSize: fonts._13,
     color: colors.BLACK,
   },

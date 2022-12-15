@@ -25,6 +25,7 @@ export default constants = {
   TXT_DATE_OF_BIRTH: 'Enter Date of Birth',
   TXT_YEAR_OF_GRADUATION: 'Enter Year of Graduation',
   TXT_STATE_MEDICAL_COUNCIL: 'Enter State Medical Council',
+  TXT_DESCRIPTION: 'Enter Description',
 
 
 

@@ -126,7 +126,7 @@ export default function SignupPatient(props) {
         <Text>Have An Account?{'  '}</Text>
         <Ripple
           onPress={() => {
-            // props.navigation.navigate('Register');
+            props.navigation.navigate('Login');
           }}>
           <Text
             style={{

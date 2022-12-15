@@ -71,6 +71,7 @@ export default function CommonInput({
 const styles = StyleSheet.create({
   text: {
     fontFamily: fonts.FONT_FAMILY.Bold,
+    fontWeight: 'bold',
     fontSize: fonts._13,
     color: colors.BLACK,
   },

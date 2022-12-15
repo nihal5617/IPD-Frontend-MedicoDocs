@@ -50,7 +50,7 @@ export default function onBoard(props){
         <Ripple
           style={internalstyles.need_help}
           onPress={() => {
-            // props.navigation.navigate('NeedHelp');
+            props.navigation.navigate('NeedHelp');
           }}>
           <Text style={internalstyles.content}>Need Help?</Text>
         </Ripple>

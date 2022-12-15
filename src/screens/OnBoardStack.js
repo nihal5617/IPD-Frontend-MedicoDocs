@@ -2,6 +2,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import GetOtp from './onBoard/GetOtp';
 import Login from './onBoard/Login';
+import NeedHelp from './onBoard/NeedHelp';
 import onBoard from './onBoard/onBoard';
 import SignupDoctor1 from './onBoard/SignupDoctor1';
 import SignupDoctor2 from './onBoard/SignupDoctor2';
@@ -69,6 +70,7 @@ export default function OnBoardStack() {
         options={{headerShown: false}}
       />
       <Stack.Screen name="SignupDoctor2" component={SignupDoctor2} />
+      <Stack.Screen name="NeedHelp" component={NeedHelp} />
     </Stack.Navigator>
   );
 }

@@ -97,8 +97,8 @@ CommonDateInput.defaultProps = {
 
 const styles = StyleSheet.create({
   text: {
-    fontFamily: fonts.FONT_FAMILY.Regular,
-    fontWeight: '400',
+    fontFamily: fonts.FONT_FAMILY.Bold,
+    fontWeight: 'bold',
     fontSize: fonts._13,
     color: colors.BLACK,
   },

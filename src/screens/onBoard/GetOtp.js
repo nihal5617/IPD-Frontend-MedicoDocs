@@ -24,7 +24,21 @@ export default function GetOtp({isDoctor,navigation}) {
 
   const onSubmit = data => {
     console.log(data);
-    // isDoctor?navigation.navigate('DoctorDashboard'):navigation.navigate('PatientDashboard');
+    if(isDoctor){
+      setTimeout(() => {
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'DoctorStack' }],
+        });
+      }, 1000);
+    }else{
+      setTimeout(() => {
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'PatientStack' }],
+        });
+      }, 1000);
+    }
   };
   const [isLoading, setLoading] = useState(false);
   return (
@@ -78,11 +92,11 @@ export default function GetOtp({isDoctor,navigation}) {
           </Text>
         </Ripple>
       </View>
-      <PrimaryButton title="Login" onPress={handleSubmit(onSubmit)} />
+      <PrimaryButton title="Confirm" onPress={handleSubmit(onSubmit)} />
         <Ripple
           style={internalstyles.need_help}
           onPress={() => {
-            // props.navigation.navigate('NeedHelp');
+            props.navigation.navigate('NeedHelp');
           }}>
           <Text style={internalstyles.needHelpText}>Need Help?</Text>
         </Ripple>
@@ -105,11 +119,6 @@ const internalstyles = StyleSheet.create({
   image: {
     width: 250,
     height: 100,
-  },
-  switch_container: {
-    marginTop: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   input_container: {
     marginTop: 10,
